@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace MyWinApp
 {
-    public partial class Form1 : Form
+    public partial class HomeForm : Form
     {
-        public Form1()
+        public HomeForm()
         {
             InitializeComponent();
+        }
+
+        private void ShowButton_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Helo "+ nameTextBox.Text+ " " + itemComboBox.Text);
         }
     }
 }
