@@ -20,6 +20,7 @@ namespace MyWinApp
         private void ShowButton_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Helo "+ nameTextBox.Text+ " " + itemComboBox.Text);
+            showTextBox.Text = "Helo " + nameTextBox.Text + " " + itemComboBox.Text;
         }
     }
 }

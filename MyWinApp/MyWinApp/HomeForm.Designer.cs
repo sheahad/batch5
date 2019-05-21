@@ -32,6 +32,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.nameTextBox = new System.Windows.Forms.TextBox();
             this.itemComboBox = new System.Windows.Forms.ComboBox();
+            this.showTextBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // ShowButton
@@ -71,11 +72,19 @@
             this.itemComboBox.Size = new System.Drawing.Size(121, 21);
             this.itemComboBox.TabIndex = 3;
             // 
+            // showTextBox
+            // 
+            this.showTextBox.Location = new System.Drawing.Point(233, 205);
+            this.showTextBox.Name = "showTextBox";
+            this.showTextBox.Size = new System.Drawing.Size(306, 20);
+            this.showTextBox.TabIndex = 4;
+            // 
             // HomeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.showTextBox);
             this.Controls.Add(this.itemComboBox);
             this.Controls.Add(this.nameTextBox);
             this.Controls.Add(this.label1);
@@ -93,6 +102,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox nameTextBox;
         private System.Windows.Forms.ComboBox itemComboBox;
+        private System.Windows.Forms.TextBox showTextBox;
     }
 }
 
