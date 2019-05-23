@@ -12,6 +12,10 @@ namespace MyWinApp
 {
     public partial class ArrayForm : Form
     {
+        const int size = 10;
+        int[] number = new int[size];
+        int index = 0;
+
         public ArrayForm()
         {
             InitializeComponent();
@@ -40,12 +44,27 @@ namespace MyWinApp
 
             showRichTextBox.Text = message;
 
-
-
-
             //double[] salary = new[] { 12.50, 52.00, 66};
 
 
+        }
+
+        private void AddButton_Click(object sender, EventArgs e)
+        {
+            
+            number[index] = Convert.ToInt32(numberTextBox.Text);
+            index++;
+
+
+            string message = "";
+
+            for (int index = 0; index < number.Length; index++)
+            {
+                if (number[index] != 0)
+                    message = message + "Element at index [" + index + "] is : " + number[index].ToString() + "\n";
+            }
+
+            showRichTextBox.Text = message;
         }
     }
 }
