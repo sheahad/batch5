@@ -31,6 +31,7 @@
             this.AddButton = new System.Windows.Forms.Button();
             this.showRichTextBox = new System.Windows.Forms.RichTextBox();
             this.numberTextBox = new System.Windows.Forms.TextBox();
+            this.nameTextBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // AddButton
@@ -53,16 +54,24 @@
             // 
             // numberTextBox
             // 
-            this.numberTextBox.Location = new System.Drawing.Point(16, 77);
+            this.numberTextBox.Location = new System.Drawing.Point(16, 33);
             this.numberTextBox.Name = "numberTextBox";
             this.numberTextBox.Size = new System.Drawing.Size(100, 20);
             this.numberTextBox.TabIndex = 2;
+            // 
+            // nameTextBox
+            // 
+            this.nameTextBox.Location = new System.Drawing.Point(16, 74);
+            this.nameTextBox.Name = "nameTextBox";
+            this.nameTextBox.Size = new System.Drawing.Size(100, 20);
+            this.nameTextBox.TabIndex = 3;
             // 
             // ListForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(303, 450);
+            this.Controls.Add(this.nameTextBox);
             this.Controls.Add(this.numberTextBox);
             this.Controls.Add(this.showRichTextBox);
             this.Controls.Add(this.AddButton);
@@ -78,5 +87,6 @@
         private System.Windows.Forms.Button AddButton;
         private System.Windows.Forms.RichTextBox showRichTextBox;
         private System.Windows.Forms.TextBox numberTextBox;
+        private System.Windows.Forms.TextBox nameTextBox;
     }
 }
