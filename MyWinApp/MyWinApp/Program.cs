@@ -19,7 +19,8 @@ namespace MyWinApp
             //Application.Run(new HomeForm());
             //Application.Run(new DataType());
             //Application.Run(new ArrayForm());
-            Application.Run(new ListForm());
+            //Application.Run(new ListForm());
+            Application.Run(new GitForm());
         }
     }
 }
