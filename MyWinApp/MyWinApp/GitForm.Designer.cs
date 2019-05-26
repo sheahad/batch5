@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.NameButton = new System.Windows.Forms.Button();
+
             this.firstNameTextBox = new System.Windows.Forms.TextBox();
             this.lastNameTextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -37,12 +38,14 @@
             // 
             // NameButton
             // 
-            this.NameButton.Location = new System.Drawing.Point(79, 95);
+            this.NameButton.Location = new System.Drawing.Point(93, 93);
+
             this.NameButton.Name = "NameButton";
             this.NameButton.Size = new System.Drawing.Size(75, 23);
             this.NameButton.TabIndex = 0;
             this.NameButton.Text = "Full Name";
             this.NameButton.UseVisualStyleBackColor = true;
+
             // 
             // firstNameTextBox
             // 
@@ -75,6 +78,8 @@
             this.label2.Size = new System.Drawing.Size(58, 13);
             this.label2.TabIndex = 4;
             this.label2.Text = "Last Name";
+
+            this.NameButton.Click += new System.EventHandler(this.NameButton_Click);
             // 
             // GitForm
             // 

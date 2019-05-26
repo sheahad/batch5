@@ -16,5 +16,10 @@ namespace MyWinApp
         {
             InitializeComponent();
         }
+
+        private void NameButton_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(firstNameTextBox.Text +" "+ lastNameTextBox.Text);
+        }
     }
 }

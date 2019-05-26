@@ -85,6 +85,9 @@
     <EmbeddedResource Include="DataType.resx">
       <DependentUpon>DataType.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GitForm.resx">
+      <DependentUpon>GitForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="HomeForm.resx">
       <DependentUpon>HomeForm.cs</DependentUpon>
     </EmbeddedResource>
