@@ -50,12 +50,18 @@ namespace MyWinApp
         }
 
         private void AddButton_Click(object sender, EventArgs e)
-        {
-            
+        {   
             number[index] = Convert.ToInt32(numberTextBox.Text);
             index++;
 
+            string message = Show("Add");
 
+            MessageBox.Show(message);
+            showRichTextBox.Text = message;
+        }
+
+        string Show(string name)
+        {
             string message = "";
 
             for (int index = 0; index < number.Length; index++)
@@ -64,7 +70,7 @@ namespace MyWinApp
                     message = message + "Element at index [" + index + "] is : " + number[index].ToString() + "\n";
             }
 
-            showRichTextBox.Text = message;
+            return name+": "+message;
         }
     }
 }
