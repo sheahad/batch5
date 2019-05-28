@@ -20,7 +20,8 @@ namespace MyWinApp
             //Application.Run(new DataType());
             //Application.Run(new ArrayForm());
             //Application.Run(new ListForm());
-            Application.Run(new GitForm());
+            //Application.Run(new GitForm());
+            Application.Run(new CustomerForm());
         }
     }
 }
