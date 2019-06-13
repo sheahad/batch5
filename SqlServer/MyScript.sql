@@ -4,13 +4,20 @@ USE StudentDB
 --DROP DATABASE StudentDB
 
 CREATE TABLE Districts(
-ID int IDENTITY (1,1),
+ID int IDENTITY (1,1) PRIMARY KEY,
 Name VARCHAR(50)
 )
 
+--DROP Table Districts
+
 INSERT INTO Districts Values ('Dhaka')
 INSERT INTO Districts Values ('Chitagong')
+INSERT INTO Districts Values ('Sylhet')
+INSERT INTO Districts Values ('Pabna')
 
+
+DELETE FROM Districts
+WHERE ID = 1
 SELECT * FROM Districts
 
 CREATE TABLE Students(
@@ -19,17 +26,20 @@ RollNo VARCHAR(10),
 Name VARCHAR(100),
 Age int,
 Address VARCHAR(MAX),
-DistrictID int
+DistrictID int FOREIGN KEY REFERENCES Districts(ID)
 )
+
 --DROP TABLE Students
 
 INSERT INTO Students (RollNo, Name, Age, Address, DistrictID) VALUES ('CSE001', 'Ali', 21, 'Mirpur',1)
 INSERT INTO Students (RollNo, Name, Age, Address, DistrictID) VALUES ('CSE002', 'Arif', 22, 'Savar',2)
 INSERT INTO Students (RollNo, Name, Age, Address, DistrictID) VALUES ('CSE003', 'Kabir', 20, 'Dhanmondi',2)
 INSERT INTO Students (RollNo, Name, Age, Address, DistrictID) VALUES ('EEE001', 'Araf', 21, 'Uttora',1)
-INSERT INTO Students (RollNo, Name, Age, Address, DistrictID) VALUES ('EEE002', 'Ali', 21, 'Motijhil',2)
+INSERT INTO Students (RollNo, Name, Age, Address, DistrictID) VALUES ('EEE002', 'Akib', 21, 'Motijhil',2)
 INSERT INTO Students (RollNo, Name, Age, Address, DistrictID) VALUES ('EEE003', 'Snigdha', 21, 'Uttora',1)
-INSERT INTO Students (RollNo, Name, Age, Address, DistrictID) VALUES ('EEE003', 'Snigdha', 21, 'Uttora',3)
+
+INSERT INTO Students (RollNo, Name, Age, Address, DistrictID) VALUES ('EEE003', 'Alif', 21, 'Uttora',1)
+INSERT INTO Students (RollNo, Name, Age, Address, DistrictID) VALUES ('EEE003', 'kia', 21, 'Uttora',2)
 
 SELECT * FROM Students
 
@@ -38,13 +48,14 @@ SET ID = 2
 WHERE Name = 'Asad' 
 
 DELETE Students
-WHERE ID = 30 
+WHERE ID = 9
 
 
 CREATE TABLE Departments(
 ID int IDENTITY (1,1),
 Name VARCHAR(50)
 )
+
 
 INSERT INTO Departments Values ('CSE')
 INSERT INTO Departments Values ('EEE')
@@ -99,5 +110,17 @@ INSERT INTO Marks VALUES (6, 2, 4, 90)
 
 SELECT * FROM MArks
 
+
+
+SELECT RollNo, s.Name, s.DistrictID , d.Name AS District, d.ID FROM Students As s
+FULL JOIN Districts As d ON d.ID = s.DistrictID
+
+
+SELECT * FROM Students As s, Districts As d
+WHERE d.ID = s.DistrictID
+
 SELECT * FROM Students
 SELECT ID, Name  FROM Districts
+
+SELECT * FROM Students, Districts
+WHERE  Students.DistrictID = Districts.ID
