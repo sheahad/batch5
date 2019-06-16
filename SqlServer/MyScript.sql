@@ -52,13 +52,18 @@ WHERE ID = 9
 
 
 CREATE TABLE Departments(
-ID int IDENTITY (1,1),
-Name VARCHAR(50)
+ID int IDENTITY (1,1) PRIMARY KEY,
+Name VARCHAR(50),
+Code VARCHAR(50)
 )
 
+UPDATE Departments 
+SET Name = '', Code =''
+WHERE ID = 1
 
-INSERT INTO Departments Values ('CSE')
-INSERT INTO Departments Values ('EEE')
+INSERT INTO Departments (Name, Code) Values ('Computer Science and Engineering','CSE')
+INSERT INTO Departments (Name, Code) Values ('Electrical and Electronics Engineering','EEE')
+
 
 SELECT * FROM Departments
 

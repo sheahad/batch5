@@ -65,6 +65,12 @@
     <Compile Include="DataType.Designer.cs">
       <DependentUpon>DataType.cs</DependentUpon>
     </Compile>
+    <Compile Include="DepartmentUi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DepartmentUi.Designer.cs">
+      <DependentUpon>DepartmentUi.cs</DependentUpon>
+    </Compile>
     <Compile Include="GitForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -93,6 +99,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DataType.resx">
       <DependentUpon>DataType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DepartmentUi.resx">
+      <DependentUpon>DepartmentUi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GitForm.resx">
       <DependentUpon>GitForm.cs</DependentUpon>
