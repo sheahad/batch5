@@ -22,7 +22,8 @@ namespace MyWinApp
             //Application.Run(new ListForm());
             //Application.Run(new GitForm());
             //Application.Run(new CustomerForm());
-            Application.Run(new DepartmentUi());
+            //Application.Run(new DepartmentUi());
+            Application.Run(new StudentUi());
         }
     }
 }

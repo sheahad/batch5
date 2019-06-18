@@ -21,7 +21,7 @@ WHERE ID = 1
 SELECT * FROM Districts
 
 CREATE TABLE Students(
-ID int IDENTITY (1,1),
+ID int IDENTITY (1,1) PRIMARY KEY,
 RollNo VARCHAR(10),
 Name VARCHAR(100),
 Age int,
@@ -43,12 +43,18 @@ INSERT INTO Students (RollNo, Name, Age, Address, DistrictID) VALUES ('EEE003', 
 
 SELECT * FROM Students
 
+CREATE VIEW StudentsView
+AS
+SELECT s.ID, RollNo, s.Name, Age, Address, DistrictID, d.Name AS District FROM Students AS s
+LEFT JOIN Districts AS d ON d.ID = s.DistrictID
+
+SELECT * FROM StudentsView
 UPDATE Students 
 SET ID = 2
 WHERE Name = 'Asad' 
 
 DELETE Students
-WHERE ID = 9
+WHERE ID = 2
 
 
 CREATE TABLE Departments(
